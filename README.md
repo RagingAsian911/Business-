@@ -1,3 +1,19 @@
+# Business Stack (PBX + Web Intake) — One-Run Bootstrap
+
+This repo is designed to be executed **once** (from USB autorun or manually) on an **already running Ubuntu Server 22.04**.
+
+What it does:
+- Installs/repairs **Asterisk 20** + **FreePBX 16**
+- Installs/repairs **Apache + PHP** web intake site
+- Enables and starts services
+- Writes a full log to `/var/log/business-stack-install.log`
+- Runs verification checks and prints PASS/FAIL
+
+Entry point:
+- `bootstrap.sh`
+
+Safety:
+- Idempotent: it uses `/var/lib/business-stack.installed` marker to avoid reruns unless you remove the marker.
 USB RUN-ONCE PACKAGE
 
 1) Label your USB drive: BUSINESS_FIX
